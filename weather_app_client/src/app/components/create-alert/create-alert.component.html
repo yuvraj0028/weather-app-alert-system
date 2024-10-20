@@ -1,0 +1,35 @@
+<h2 mat-dialog-title class="dialog-title">Create Alert</h2>
+
+<mat-dialog-content class="dialog-content">
+  <mat-form-field appearance="fill" class="form-field">
+    <mat-label>Enter Email</mat-label>
+    <input matInput type="email" [required]="true" [(ngModel)]="email" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="form-field">
+    <mat-label>To change location search from the search bar and select it!</mat-label>
+    <input matInput type="text" [required]="true" [(ngModel)]="location" [disabled]="true" />
+  </mat-form-field>
+
+  <div class="temperature-inputs">
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Minimum Temperature</mat-label>
+      <input matInput type="number" [required]="true" [(ngModel)]="minTemp" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Maximum Temperature</mat-label>
+      <input matInput type="number" [required]="true" [(ngModel)]="maxTemp" />
+    </mat-form-field>
+  </div>
+
+  <div class="temperature-toggle">
+    <mat-label>Temperature Units Default value is °C click on the checkbox to change</mat-label>
+    <mat-checkbox class="temp-checkbox" [(ngModel)]="imperialUnit">°K</mat-checkbox>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button class="cancel-button" (click)="onCloseClick()">Cancel</button>
+  <button mat-button class="create-button" (click)="onCreateClick()">Create</button>
+</mat-dialog-actions>

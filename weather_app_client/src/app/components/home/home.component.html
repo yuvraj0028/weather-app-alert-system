@@ -1,0 +1,11 @@
+<app-header (locationSelected)="selectLocation($event)" (unitChanged)="toggleUnit($event)"
+  [weatherData]="weatherData"></app-header>
+<div class="main-container">
+  <app-user-location class="user-location" [searchData]="searchedLocation" (weatherSummary)="getWeatherSummary($event)"
+    (weatherData)="getWeather($event)" [units]="unit"></app-user-location>
+  <div class="info-container">
+    <app-metro-cities class="metro-cities" [units]="unit"></app-metro-cities>
+    <app-daily-summery class="daily-summary" [weatherSummary]="weatherSummary"></app-daily-summery>
+  </div>
+</div>
+<app-footer></app-footer>

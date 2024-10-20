@@ -1,0 +1,36 @@
+.dialog-title {
+  text-align: start;
+  color: black; // Example of a theme color that matches your app's style
+}
+
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; // Adds spacing between form fields
+}
+
+.form-field {
+  width: 100%;
+}
+
+.temperature-inputs {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.temperature-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.temp-checkbox {
+  color: #444444; // Matches a button color or other theme elements
+}
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}

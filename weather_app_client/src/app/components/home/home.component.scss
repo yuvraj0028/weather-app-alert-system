@@ -1,0 +1,30 @@
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.user-location {
+  flex: 1;
+  min-width: 400px;
+  padding-left: 1%;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  gap: 20px;
+  padding-right: 3%;
+  padding-left: 3%;
+}
+
+.metro-cities {
+  flex: 1;
+}
+
+.daily-summary {
+  flex: 1;
+}

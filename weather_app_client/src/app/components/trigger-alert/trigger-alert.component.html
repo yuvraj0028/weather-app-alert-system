@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>Trigger Alert </h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput [type]="email" [required]="true" [(ngModel)]="email" />
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCloseClick()">Cancel</button>
+  <button mat-button cdkFocusInitial (click)="onTriggerClick()">Trigger</button>
+</mat-dialog-actions>

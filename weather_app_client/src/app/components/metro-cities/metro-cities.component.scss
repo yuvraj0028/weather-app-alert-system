@@ -1,0 +1,36 @@
+.weather-table-container {
+  margin-top: 20px;
+  background-color: rgba(44, 62, 80, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.weather-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.weather-table h3 {
+  text-align: center;
+  color: #ecf0f1;
+}
+
+.weather-table th,
+.weather-table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ecf0f1;
+  color: #ecf0f1;
+}
+
+.weather-table th {
+  background-color: #34495e;
+}
+
+.weather-table tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.weather-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}

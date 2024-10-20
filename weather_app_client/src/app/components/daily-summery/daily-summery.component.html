@@ -1,0 +1,18 @@
+<div class="weather-summary-container">
+  <h2>Weather Summary</h2>
+  <div *ngIf="!weatherSummary">
+    <p>
+      Search for a location or give permission of your location to get a detailed weather summary.
+    </p>
+  </div>
+  <div class="weather-summary" *ngIf="weatherSummary">
+    <p>
+      Today's weather in <strong>{{weatherSummary.city}} </strong> indicates that the maximum temperature will reach
+      <strong>{{weatherSummary.maxTemp}} </strong>, while the minimum temperature is expected to drop to
+      <strong> {{weatherSummary.minTemp}} </strong>. The overall weather condition is
+      <strong> {{weatherSummary.condition}} </strong> with a humidity level of
+      <strong> {{weatherSummary.humidity}}%</strong>. Be prepared for the temperature to feel like
+      <strong> {{weatherSummary.temp}} </strong>. Stay comfortable and enjoy your day!
+    </p>
+  </div>
+</div>

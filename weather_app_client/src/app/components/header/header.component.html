@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="assets/logo.png" alt="Logo" class="logo" /> Weather App
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="d-flex ms-auto mt-2 mt-lg-0 position-relative">
+        <input [(ngModel)]="searchQuery" (ngModelChange)="onSearch()"
+          class="form-control me-2 rounded-pill search-input" type="search" placeholder="Search Location"
+          aria-label="Search">
+        <!-- Beautified Dropdown -->
+        <ul class="dropdown-menu custom-dropdown" [ngClass]="{'show': filteredLocations.length > 0}"
+          style="position: absolute; top: 100%; left: 0;">
+          <li *ngFor="let location of filteredLocations">
+            <a class="dropdown-item custom-dropdown-item" href="#" (click)="selectLocation(location)">
+              {{ location.name }}, {{ location.state }}
+            </a>
+          </li>
+        </ul>
+        <button class="btn btn-lg rounded-pill btn-bluish-orange me-2" type="submit" (click)="createAlert()">Create
+          Alert</button>
+        <button class="btn btn-lg rounded-pill btn-bluish-orange me-2" type="button" (click)="toggleUnit()"> Switch to
+          °{{ currUnit=='C' ? 'K' : 'C' }} </button>
+      </div>
+    </div>
+  </div>
+</nav>
